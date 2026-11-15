@@ -1,0 +1,115 @@
+<!--
+    Centria Edu - Basics of Web Development
+
+    Original author: Ville Heikkiniemi
+    Modified by: 
+    Last modified: 2026-11-15
+
+    Based on the original course template.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ville Heikkiniemi">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Contact | Centria Edu</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    centria <span>edu</span>
+                </div>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#topics">Topics</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="label">Basics of Web Development</span>
+                    <h1>Get in touch</h1>
+                    <p>Complete the form below and let us know how we can help. Fields marked “required” must be filled in.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="topics" id="contact">
+            <div class="container">
+                <h2>Contact us</h2>
+
+                <form class="card" action="https://httpbin.org/post" method="post">
+                    <div class="form-field">
+                        <label for="name">Name (required, 2–80 characters)</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required minlength="2" maxlength="80">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email address (required, up to 120 characters)</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required maxlength="120">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone number (optional)</label>
+                        <p id="phone-help">Enter 7–15 digits, optionally starting with +. Do not use spaces or hyphens. Example: +358401234567.</p>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[+]?[0-9]{7,15}" aria-describedby="phone-help">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="subject">Subject (required)</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choose a subject</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="question">Question</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="form-field form-field--radio">
+                        <legend>Preferred contact method (required)</legend>
+                        <label class="radio-option" for="contact-email">
+                            <input type="radio" id="contact-email" name="preferred_contact" value="email" required>
+                            Email
+                        </label>
+                        <label class="radio-option" for="contact-phone">
+                            <input type="radio" id="contact-phone" name="preferred_contact" value="phone" required>
+                            Phone
+                        </label>
+                    </fieldset>
+
+                    <div class="form-field">
+                        <label for="message">Message (required, 20–1,000 characters)</label>
+                        <textarea id="message" name="message" required minlength="20" maxlength="1000"></textarea>
+                    </div>
+
+                    <button class="button form-submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="about">
+        <div class="container">
+            <p>&copy; Shahrooz Haider 2026 Centria Edu</p>
+        </div>
+    </footer>
+
+</body>
+</html>
